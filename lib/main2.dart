@@ -5,7 +5,7 @@ import 'package:flutter/widgets.dart';
 class MyTest extends StatefulWidget{
   @override
   State<StatefulWidget> createState() => _MytestState();
-  //git remote add origin git@github.com:chrism1981/flutter_practice.git
+  //git remote add origin git@github.com:chrism1981/flutter_practice.git 1
 }
 
 class _MytestState extends State<MyTest> with SingleTickerProviderStateMixin{
