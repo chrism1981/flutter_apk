@@ -38,6 +38,7 @@ dependencies:
   intl: 0.15.7
   city_pickers: ^0.1.0
   path_provider: ^1.1.0
+  collection: 1.14.11
 dev_dependencies:
   flutter_test:
     sdk: flutter

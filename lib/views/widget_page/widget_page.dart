@@ -39,6 +39,7 @@ class SecondPageState extends State<WidgetPage> with AutomaticKeepAliveClientMix
   }
 
   void renderCats() {
+    // parent == 0  getlist() cat = null
     catModel.getList().then((List data) {
       if (data.isNotEmpty) {
         setState(() {
@@ -50,6 +51,8 @@ class SecondPageState extends State<WidgetPage> with AutomaticKeepAliveClientMix
 
   Widget buildGrid() {
     // 存放最后的widget
+    // 每个card是一个一级目录，里面包含了n个2级目录的view
+
     List<Widget> tiles = [];
     for (Cat item in categories) {
       tiles.add(new CateCard(category: item));

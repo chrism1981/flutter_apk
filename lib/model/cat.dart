@@ -71,6 +71,8 @@ class CatControlModel{
     sql = Sql.setTable(table);
   }
 
+
+
   /// 获取一级类目
   Future<List> mainList() async{
     List listJson =  await sql.getByCondition(conditions: {'parentId': 0});
@@ -80,18 +82,20 @@ class CatControlModel{
     return cats;
   }
 
+  Cat callback(Map json){
+    return Cat.fromJSON(json);
+  }
+
   // 获取Cat不同深度与parent的列表
   Future<List<Cat>> getList([Cat cat]) async{
-
-
     if (cat == null) {
       cat = new Cat(depth: 1, parentId: 0);
     }
     // print("cat in getList ${cat.toMap()}");
     List listJson =  await sql.getByCondition(conditions: cat.toSqlCondition());
-    List<Cat> cats = listJson.map((json) {
-      return new Cat.fromJSON(json);
-    }).toList();
+    List<Cat> cats = listJson.map((json) => Cat.fromJSON(json)).toList();
+    cats.forEach((cat)=> print(cat));
+    print("wancheng yici ");
     return cats;
   }
 

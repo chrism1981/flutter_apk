@@ -124,9 +124,9 @@ class _MyHomePageState extends State<AppPage>
     return new Scaffold(
       appBar: new AppBar(title: buildSearchInput(context)),
       body: new TabBarView(controller: controller, children: <Widget>[
-        new FirstPage(),
-        new WidgetPage(db),
-        new CollectionPage(),
+         FirstPage(),
+         WidgetPage(db),
+         CollectionPage(),
         FourthPage()
       ]),
       bottomNavigationBar: Material(

@@ -78,8 +78,8 @@ class _CateCardState extends State<CateCard> {
             left: 0.0,
             top: 0.0,
             child: Container(
-              height: 60.0,
-              width: 60.0,
+              height: 90.0,
+              width: 90.0,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(30.0),
@@ -118,7 +118,7 @@ class _CateCardState extends State<CateCard> {
           alignment: Alignment.bottomRight
         ),
       ),
-      child: WidgetItemContainer(
+      child: WidgetItemContainer(// 子list 的view 每行3个item
         categories: this._firstChildList,
         columnCount: 3,
         isWidgetPoint:false
